@@ -1,17 +1,45 @@
-OAI_CONFIG_LIST
-PERSONAL_KEYS
-config_api_keys
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environments
+.env
+.venv
+.conda/
+conda/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Caches
 .cache/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data / temp
+tmp/
+dist/
+
+# Media / exports
 *.csv
 *.jpg
 *.png
+
+# Project-specific (safe to ignore if unused)
 quant/
 coding/
-*.egg-info/
-.DS_Store
 projects/
-dist/
-tmp/
 filings/
+
+# Secrets
+OAI_CONFIG_LIST
+PERSONAL_KEYS
+config_api_keys
