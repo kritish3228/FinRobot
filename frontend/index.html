@@ -10,15 +10,15 @@
     <div class="dashboard-wrapper">
         <header>
             <div class="logo">Fin<span>Robot</span></div>
-            <div id="connection-status" class="status">● System Ready</div>
+            <div id="connection-status" class="status">System Online</div>
         </header>
 
         <main class="main-content">
             <section class="sidebar">
                 <div class="card">
                     <h3>Market Analysis</h3>
-                    <p class="subtitle">Enter a ticker to begin</p>
-                    <input type="text" id="companyInput" placeholder="e.g. NVDA, TCS, AAPL" />
+                    <p class="subtitle" style="color: var(--text-secondary); font-size: 0.85rem;">Global Ticker Support Active</p>
+                    <input type="text" id="companyInput" placeholder="e.g. AAPL, NVDA, TCS.NS" />
                     <button onclick="analyze()" id="analyzeBtn">Run AI Agent</button>
                 </div>
 
@@ -31,22 +31,23 @@
 
             <section class="report-area">
                 <div id="placeholder-text">
-                    <div class="icon-pulse">📊</div>
+                    <div class="icon-pulse" style="font-size: 3rem; margin-bottom: 20px;">📊</div>
                     <h2>Awaiting Intelligence Input</h2>
-                    <p>Enter a company symbol to generate a comprehensive investment report.</p>
+                    <p>Enter a company symbol to generate a live AI investment report.</p>
                 </div>
                 
                 <div id="loader" class="loader hidden">
                     <div class="spinner"></div>
-                    <p>AI Agents are scanning historical data...</p>
+                    <p>AI Agents are scanning Yahoo Finance...</p>
                 </div>
 
                 <div id="result" class="result-card hidden">
-                    <div class="report-header">
-                        <h2 id="report-title">Analysis Report</h2>
-                        <div id="decision-badge">BUY</div>
+                    <div class="report-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <h2 id="report-title" style="margin: 0;">Analysis Report</h2>
+                        <div id="decision-badge">PENDING</div>
                     </div>
-                    <div id="explanation-text"></div>
+                    <div id="live-price" style="font-size: 1.5rem; font-weight: bold; color: var(--accent); margin-bottom: 20px;"></div>
+                    <div id="explanation-text" style="line-height: 1.6; color: var(--text-primary);"></div>
                 </div>
             </section>
         </main>
